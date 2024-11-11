@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-compatible IE = edge">
+    <title>Alpha-clash</title>
+    <link rel="icon" image="x-icon" href="">
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.14/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap');
+
+        .main {
+            background-image: url(images/background.png);
+            background-repeat: no-repeat;
+            background-position: center;
+
+        }
+
+        .borrder {
+            border: 20px solid;
+        }
+    </style>
+</head>
+
+<body class="bg-[#010313] font-roboto">
+    <main class=" main min-h-screen">
+        <section id="interface" class="min-h-screen flex flex-col  justify-center items-center ">
+            <div class="text-center ">
+                <h1 class=" text-white uppercase text-9xl items-center text-center mb-5  p-4 rounded-xl">alphabet clash
+                </h1>
+                <p class="text-3xl mb-7 text-white">Unleash Your Keyboard Kung FU: Press `Enter` To Play</p>
+                <button onclick="play()"
+                    class="btn-primary text-5xl bg-[#68239d] p-5 rounded-xl bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500">Play
+                    Now</button>
+            </div>
+        </section>
+        <section id="playFace" class="pt-20 hidden">
+            <div class="flex p-2 pb-10  rounded-xl justify-center "><p class=" text-xl bg-gradient-to-r from-pink-500 via-purple-500 to-pink-500 text-white p-5 rounded-xl">Don't look to Your Keyboard When You Playing!</p></div> 
+            <div class="flex  justify-center ">
+                <div
+                    class=" flex flex-col artboard artboard-horizontal phone-3 bg-white/50 rounded-xl borrder justify-center items-center">
+                    <span  id="current-alpha" class="text-9xl text-white uppercase">A</span>
+                </div>
+            </div>
+            <div class=" mt-20">
+                <div class="my-2 flex w-full justify-center gap-2">
+                    <kbd id="q" class="kbd text-2xl">q</kbd>
+                    <kbd id="w" class="kbd text-2xl">w</kbd>
+                    <kbd id="e" class="kbd text-2xl">e</kbd>
+                    <kbd id="r" class="kbd text-2xl">r</kbd>
+                    <kbd id="t" class="kbd text-2xl">t</kbd>
+                    <kbd id="y" class="kbd text-2xl">y</kbd>
+                    <kbd id="u" class="kbd text-2xl">u</kbd>
+                    <kbd id="i" class="kbd text-2xl">i</kbd>
+                    <kbd id="o" class="kbd text-2xl">o</kbd>
+                    <kbd id="p" class="kbd text-2xl">p</kbd>
+                </div>
+                <div class="my-2 flex w-full justify-center gap-2">
+                    <kbd id="a" class="kbd text-2xl">a</kbd>
+                    <kbd id="s" class="kbd text-2xl">s</kbd>
+                    <kbd id="d" class="kbd text-2xl">d</kbd>
+                    <kbd id="f" class="kbd text-2xl">f</kbd>
+                    <kbd id="g" class="kbd text-2xl">g</kbd>
+                    <kbd id="h" class="kbd text-2xl">h</kbd>
+                    <kbd id="j" class="kbd text-2xl">j</kbd>
+                    <kbd id="k" class="kbd text-2xl">k</kbd>
+                    <kbd id="l" class="kbd text-2xl">l</kbd>
+                </div>
+                <div class="my-2 flex w-full justify-center gap-2">
+                    <kbd id="z" class="kbd text-2xl">z</kbd>
+                    <kbd id="x" class="kbd text-2xl">x</kbd>
+                    <kbd id="c" class="kbd text-2xl">c</kbd>
+                    <kbd id="v" class="kbd text-2xl">v</kbd>
+                    <kbd id="b" class="kbd text-2xl">b</kbd>
+                    <kbd id="n" class="kbd text-2xl">n</kbd>
+                    <kbd id="m" class="kbd text-2xl">m</kbd>
+                    <kbd id="/" class="kbd text-2xl">/</kbd>
+                </div>
+            </div>
+            <div class="flex justify-around ">
+                <button
+                    class=" bg-gradient-to-r from-violet-500 to-fuchsia-500 p-4 text-3xl items-center rounded-xl ">Life
+                    <i class="fa-solid fa-heart"></i> <span id="life-card">5</span></button>
+                <button
+                    class=" bg-gradient-to-r from-violet-500 to-fuchsia-500 p-4 text-3xl rounded-xl text-medium ">Score</i>
+                    <span id="scoreCard">0</span></button>
+            </div>
+        </section>
+        <section id="score" class="min-h-screen flex flex-col  justify-center items-center hidden">
+            <div
+                class=" flex   flex-col gap-4 p-5 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 text-center rounded-xl">
+               <h2 class="text-4xl text-white">Game Over <span class=" text-red-800">!</span></h2>
+                <h1 class="text-5xl text-bold mt-4 text-white">Score : <span id="finalS" class="text-5xl text-bold pb-1">0</span>
+                </h1>
+                <button onclick="play()"
+                    class="btn-primary text-5xl shadow-2xl p-3 rounded-xl bg-gradient-to-r from-cyan-500 to-blue-500">Play
+                    Again</button>
+
+                <p class="text-2xl mb-7 text-white">Practice More To Become pro!</p>
+            </div>
+            </div>
+        </section>
+
+
+
+
+
+
+    </main>
+    <script src="javcascript/utility.js"></script>
+    <script src="javcascript/javascript.js"></script>
+</body>
+
+</html>
